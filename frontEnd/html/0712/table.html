@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px black double;
+        }
+        table {
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- table>(th>td*4)+(tr>td*4)*4 -->
+    <table>
+        <caption>식사 메뉴 테이블</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+                <th>목요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>아침식사</th>
+                <td colspan="2">카레</td>
+                <!-- <td>카레</td> -->
+                <td>설렁탕</td>
+                <td>카레</td>
+            </tr>
+            <tr>
+                <th>점심식사</th>
+                <td><input type="text"></td>
+                <td>국수</td>
+                <td>짜장면</td>
+                <td rowspan="2">탕수육</td>
+            </tr>
+            <tr>
+                <th>저녁식사</th>
+                <td>피자</td>
+                <td>탕수육</td>
+                <td>피자</td>
+                <!-- <td>탕수육</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>총 칼로리</th>
+                <td>2000kcal</td>
+                <td>3000kcal</td>
+                <td>3200kcal</td>
+                <td>3100kcal</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

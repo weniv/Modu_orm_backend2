@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 클래스와 가상 요소</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: all 1s;
+        }
+        .one:hover {
+            background-color: blue;
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        .two::before {
+            content: '약 ';
+        }
+        .two::after {
+            content: 'cm';
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <div class="two">10</div>
+</body>
+</html>

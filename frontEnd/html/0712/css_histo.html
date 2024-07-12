@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>hello</p>
+    <!-- <br> 이것을 사용해서 + 엔티티코드 여백을 조정하는 일은 FE에게 허용할 수 없는 코드입니다. -->
+    &nbsp;&nbsp;&nbsp;&nbsp;hello
+    <br>
+    <br>
+    <!-- FE에게 아래와 같은 코드는 허용할 수 없는 코드입니다. -->
+    <p style="margin-bottom: 10px;">hello</p>
+    <p style="color:blue;">hello</p>
+    <p>hello</p>
+</body>
+</html>
