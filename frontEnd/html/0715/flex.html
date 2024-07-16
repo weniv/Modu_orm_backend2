@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            background-color: gainsboro;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .wrap>div>div {
+            color: white;
+            line-height: 100px;
+            text-align: center;
+            font-size: 40px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .blue {
+            background-color: #4967d8;
+        }
+
+        .pink {
+            background-color: #ea8676;
+        }
+
+        .yellow {
+            background-color: #fad84a;
+        }
+
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right-side {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="left-side">
+            <div class="blue">A</div>
+            <div class="pink">B</div>
+            <div class="yellow">C</div>
+        </div>
+        <div class="center">
+            <div class="blue">D</div>
+            <div class="yellow">E</div>
+        </div>
+        <div class="right-side">
+            <div class="blue">F</div>
+            <div class="pink">G</div>
+            <div class="yellow">H</div>
+        </div>
+    </div>
+</body>
+
+</html>

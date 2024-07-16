@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+        .box {
+            display: inline-block;
+            position: relative;
+            width: 64px;
+            height: 64px;
+            top: 32px;
+            left: 32px;
+        }
+
+        .back {
+            width: 128px;
+            height: 128px;
+            background: black;
+        }
+
+        .red {
+            background: red;
+        }
+
+        .green {
+            background: green;
+        }
+
+        .blue {
+            background: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box back">
+        <div class="box red">
+            <div class="box green"></div>
+        </div>
+        <div class="box blue"></div>
+    </div>
+
+    <div class="box back">
+        <div class="box red">
+            <!-- 나는 내 뒤에 다른 요소가 있으면 무조건 더 낮을 거야! 하지만 내 자식은 나의 순서를 따르지 않아도 괜찮아 :) -->
+            <div class="box green" style="z-index: 100"></div>
+        </div>
+        <div class="box blue"></div>
+    </div>
+
+    <div class="box back">
+        <div class="box red" style="z-index: 0">
+            <!-- 나는 내 뒤에 다른 요소가 있으면 무조건 더 낮을 거야! 그리고 내 자식은 나의 순서를 따라야만 해! -->
+            <div class="box green" style="z-index: -1"></div>
+        </div>
+        <div class="box blue"></div>
+    </div>
+</body>
+
+</html>

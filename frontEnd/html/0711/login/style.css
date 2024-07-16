@@ -1,0 +1,51 @@
+article {
+    width: 350px;
+    padding: 18px 15px 17px;
+    font-size: 12px;
+    line-height: 15px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.link-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: block; */
+    margin: 16px 0;
+    background-color: #711BFF;
+    padding: 14px 0 11px;
+    color: white;
+    border-radius: 4px;
+    /* text-align: center; */
+}
+
+.link-login img {
+    margin: -4px 4px 0 0;
+    /* margin-right: 4px; */
+    /* vertical-align: -4px; */
+}
+
+.img-lock,
+.img-user {
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    /* vertical-align: -3px; */
+}
+
+/* .img-user {
+    margin-left: 128px;
+} */
+
+.utility-user {
+    display: flex;
+    justify-content: space-between;
+}
+
+.utility-user div {
+    display: flex;
+    align-items: center;
+    /* float: right; */
+}

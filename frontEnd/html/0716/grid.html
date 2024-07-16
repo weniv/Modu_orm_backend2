@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            list-style: none;
+            background-color: royalblue;
+            grid-template-areas:
+                "header header header"
+                "section section aside"
+                "footer footer footer"
+            ;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #fff;
+        }
+
+        .section {
+            grid-area: section;
+            background-color: blue;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: yellow;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        li {
+            background-color: teal;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="header">1</li>
+        <!-- <li>2</li>
+        <li>3</li> -->
+        <li class="section">4</li>
+        <!-- <li>5</li> -->
+        <li class="aside">6</li>
+        <li class="footer">7</li>
+        <!-- <li>8</li>
+        <li>9</li> -->
+    </ul>
+</body>
+
+</html>
