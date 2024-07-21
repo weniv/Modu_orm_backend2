@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+    <script>
+        // const avengers = ['spiderman', 'ironman', 'hulk', 'thor', 'Dr.strange'];
+
+        // const items = document.querySelectorAll('li');
+
+        // avengers.forEach(function (item, index) {
+        //     items[index].innerHTML = item;
+        // });
+
+        //여러분은 아래와 같은 학생들의 시험 점수를 가지고 있습니다.
+
+        // 88, 97, 45, 68, 75, 89, 100, 90
+
+        // 학생들의 점수를 내림차순으로 정렬하고, 각 점수의 순위를 매겨 출력하는 프로그램을 작성하세요.
+
+
+        // const scores = [88, 97, 45, 68, 75, 89, 100, 90];
+        // // const scores2 = scores.slice();
+
+        // scores.sort((a, b) => {
+        //     return b - a;
+        // });
+
+        // scores.forEach((score, index) => {
+        //     //"ㅁㄴㅇㄹㅁㄹ", 'ㅁㅇㄹㅁㄴㄹㅇ', `adfasfdaf`
+        //     console.log(`결과는 ${index + 1}  등:  ${score}  입니다~`);
+        // });
+
+
+
+        // 1등: 100
+        // 2등: 97
+        // 3등: 90
+        // 4등: 89
+        // 5등: 88
+        // 5등: 88
+        // 6등: 75
+        // 7등: 68
+        // 8등: 45
+
+
+
+
+        const scores = [88, 97, 45, 68, 75, 89, 100, 90, 75, 88];
+
+        scores.sort((a, b) => {
+            return b - a;
+        });
+
+        // 등 수
+        let rank = 1;
+        // 이전 점수값
+        let prevScore = scores[0];
+        // 같은 점수의 갯수
+        let sameRankCount = 0;
+
+
+        scores.forEach((score, index) => {
+
+            if (index !== 0) {
+                // 지금 점수와 이전 점수가 같지 않다면
+                if (score !== prevScore) {
+
+                    // 지금까지 누적된 동일 점수 카운트를 뺍니다. 그렇게 함으로써 등수의 증가를 막습니다.
+                    rank = index + 1 - sameRankCount;
+
+                    // 현재 점수를 다음 점수와 비교하기위해 저장해 둡니다.
+                    prevScore = score;
+
+                    // 누적된 동일 점수의 카운트를 0으로 초기화 합니다.
+                    sameRankCount = 0;
+
+                    // 지금 점수와 이전 점수가 같다면
+                } else {
+                    sameRankCount++;
+                }
+            }
+            console.log(`${rank}등: ${score}`);
+        });
+    </script>
+</body>
+
+</html>

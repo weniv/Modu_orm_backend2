@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const me = {
+            name: '한재현',
+            address: '제주도 제주시 인다 1길',
+            phoneNum: '010-8000-0000',
+            canWalk: function () {
+                console.log('재현이가 걷는다.');
+            },
+            teaching: function (student) {
+                student.levelUp();
+            }
+        }
+
+        function Me(name, address, phoneNum) {
+            this.name = name;
+            this.address = address;
+            this.phoneNum = phoneNum;
+        }
+
+        Me.prototype.canWalk = function () {
+            console.log('재현이가 걷는다.');
+        };
+
+        Me.prototype.teaching = function (student) {
+            student.levelUp();
+        }
+
+        class Me2 {
+            constructor(name, address, phoneNum) {
+                this.name = name;
+                this.address = address;
+                this.phoneNum = phoneNum;
+            }
+
+            canWalk() {
+                console.log('재현이가 걷는다.');
+            }
+
+            teaching(student) {
+                student.levelUp();
+            }
+        }
+    </script>
+</body>
+
+</html>

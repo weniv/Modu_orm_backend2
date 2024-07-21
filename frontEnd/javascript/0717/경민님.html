@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        .a11y {
+            position: absolute;
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .user-img {
+            width: 25%;
+        }
+
+        .user-img img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .address {
+            width: 75%;
+        }
+
+        .address h2 {
+            color: black;
+        }
+
+        .address h2 span {
+            color: #007bff;
+            font-size: 70%;
+            vertical-align: 3px;
+        }
+
+        .address div {
+            margin: 13px;
+        }
+
+        .info label {
+            display: inline-block;
+            min-width: 100px;
+            margin: 12px 0;
+        }
+
+        .blog {
+            display: flex;
+            align-items: center;
+            background-color: #818181;
+            border-radius: 8px;
+            height: 44px;
+            margin-top: 10px;
+            padding: 2px 15px;
+        }
+
+        .blog img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .blog a {
+            margin-left: 12px;
+        }
+
+        main {
+            max-width: 778px;
+            margin: 40px;
+        }
+
+        h2 {
+            font-weight: bold;
+            display: block;
+            font-size: 1.5em;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 16px;
+            margin-top: 30px;
+        }
+
+        h3 {
+            background-color: #5C8EF226;
+            color: #007bff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 24px;
+        }
+
+        p {
+            margin: 20px 0;
+            line-height: 26px;
+        }
+
+        .skills {
+            margin: 39px 0;
+        }
+
+        .skills h2 {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #007bff;
+            border-bottom: 0px;
+            padding-bottom: 5px;
+            margin-right: 20px;
+        }
+
+        .skills h2 span {
+            font-weight: normal;
+            font-size: 1em;
+            color: #007bff;
+            border: 1px solid #888888;
+            background-color: #F3F5FA;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 30px;
+        }
+
+        .profile-link li {
+            display: flex;
+            align-items: center;
+            background-color: #818181;
+            border-radius: 8px;
+            height: 44px;
+            margin-top: 10px;
+            padding: 2px 15px;
+        }
+
+        .profile-link img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .profile-link a {
+            margin-left: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <!-- 인적 사항 -->
+        <section class="profile-header">
+            <div class="user-img">
+                <img src="../images/pic_profile.png" alt="사진">
+            </div>
+            <div class="address">
+                <h2 class="name">라이캣 <span class="licat">licat</span></h2>
+                <div class="info"><label>전화번호</label><span>010-1111-2222</span></div>
+                <div class="info"><label>이메일</label><span>weniv@weniv.co.kr</span></div>
+                <div class="info"><label>경력 사항</label><span>신입</span></div>
+                <div class="blog"><img src="../images/link_icon.png" alt="">기술 블로그 <a
+                        href="">https://github.com/weniv</a></div>
+            </div>
+
+        </section>
+        <!-- Introduction -->
+        <section class="introduction">
+            <h2>Introduction</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula magna ac purus posuere, non
+                tempus nulla eleifend. Fusce ac justo vitae velit malesuada auctor. Maecenas tincidunt metus ut ex
+                auctor, non tincidunt arcu efficitur. Sed at felis et sapien lacinia tincidunt. Proin imperdiet massa
+                nec diam scelerisque, et euismod nunc hendrerit. Nam efficitur mi id dolor tincidunt, sed facilisis
+                felis viverra. Donec vitae ultricies velit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula magna ac purus posuere, non
+                tempus nulla eleifend. Fusce ac justo vitae velit malesuada auctor. Maecenas tincidunt metus ut ex
+                auctor, non tincidunt arcu efficitur. Sed at felis et sapien lacinia tincidunt. Proin imperdiet massa
+                nec diam scelerisque, et euismod nunc hendrerit. Nam efficitur mi id dolor tincidunt, sed facilisis
+                felis viverra. Donec vitae ultricies velit.</p>
+        </section>
+        <!-- Skills -->
+        <section class="skills">
+            <h2>Skills <span>Python</span><span>Django</span></h2>
+        </section>
+        <!-- Project 문단 시작 -->
+        <section>
+            <h2>Project</h2>
+            <article>
+                <h3>프로젝트 예시</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula magna ac purus posuere, non
+                    tempus nulla eleifend. Fusce ac justo vitae velit malesuada auctor. Maecenas tincidunt metus ut ex
+                    auctor, non tincidunt arcu efficitur. Sed at felis et sapien lacinia tincidunt. Proin imperdiet
+                    massa nec diam scelerisque, et euismod nunc hendrerit. Nam efficitur mi id dolor tincidunt, sed
+                    facilisis felis viverra. Donec vitae ultricies velit.</p>
+                <ul class="profile-link">
+                    <li><img src="../images/link_icon.png" alt=""> 깃허브 링크 <a href="">https://github.com/weniv</a></li>
+                    <li><img src="../images/link_icon.png" alt=""> 프로젝트 링크 <a href="">weniv.co.kr</a></li>
+                    <li><img src="../images/link_icon.png" alt="">프로젝트 SNS 링크 <a href="">https://github.com/weniv</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

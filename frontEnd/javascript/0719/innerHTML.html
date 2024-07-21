@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <input type="text">
+    <button>Write Something!</button>
+
+    <script>
+        const name = "<img src='x' onerror='alert(1)'>";
+
+
+        const myBtn = document.querySelector("button");
+        const myP = document.querySelector("p");
+        myP.textContent = '<strong>,$%안녕하세요</strong>';
+
+        const myInput = document.querySelector("input");
+        myBtn.addEventListener('click', function () {
+            myP.innerHTML = myInput.value; // shows the alert
+        });
+    </script>
+</body>
+
+</html>

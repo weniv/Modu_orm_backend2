@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 주석입니다 주석. -->
+    <article class="cont">
+        <h1>안녕하세요 저는 이런 사람입니다.</h1>
+        <p>지금부터 자기소개 올리겠습니다</p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt incidunt voluptates laudantium fugit, omnis
+        dolore itaque esse exercitationem quam culpa praesentium, quisquam repudiandae aut. Molestias qui quas ea iure
+        officiis.
+        <strong>감사합니다!</strong>
+    </article>
+
+
+    <strong class="sayHi">
+        반갑습니다.
+        <span>저는</span>
+        <em>
+            한재현입니다.
+            <span>ㅎㅎㅎㅎ</span>
+        </em>
+    </strong>
+
+    <img class="terran battle-cruiser" src="battle-cruiser.png" data-ship-id="324" data-weapons="laser"
+        data-health="400" data-mana="250" data-skill="yamato-cannon" />
+
+
+    <script>
+
+        const cont = document.querySelector('.cont');
+
+        const sayHi = document.querySelector('.sayHi');
+        sayHi.insertAdjacentHTML('afterbegin', '<span>안녕하세요 저는</span>');
+        // sayHi.insertAdjacentHTML('afterbegin', '<span>재현입니다</span>');
+        // sayHi.insertAdjacentHTML('beforeend', '<span>면접오시면</span>');
+        // sayHi.insertAdjacentHTML('afterend', '<span>치킨사드릴게요</span>');
+
+
+        const img = document.querySelector('img');
+        img.hp = 100;
+        img.shild = 100;
+        img.man = 200;
+
+        console.log(img.dataset);
+        console.log(img.dataset.shipId);
+    </script>
+</body>
+
+</html>
