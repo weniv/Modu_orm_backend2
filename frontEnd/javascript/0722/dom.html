@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <article class="parent">
+        <ol>
+            <li><button class="btn-first" type="button">버튼1</button></li>
+            <li><button type="button">버튼2</button></li>
+            <li><button type="button">버튼3</button></li>
+        </ol>
+    </article>
+
+    <!-- <script type="module" src="test.js"> -->
+    <script>
+        // scope: 데이터의 생존 범위
+
+        // def test:
+        // test = 1
+
+        // {
+        //     let test1;
+        //     const test2 = 1;
+        // }
+
+        const parent = document.querySelector('.parent');
+        parent.addEventListener('click', (event) => {
+            console.log(event.currentTarget);
+            if (event.target.nodeName === "BUTTON") {
+                event.target.textContent = "버튼4";
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>
