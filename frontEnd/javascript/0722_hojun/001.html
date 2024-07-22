@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        let p = new Promise((resolve, reject) => {
+            resolve('hello world'); // 성공
+            // reject('hello world'); // 실패
+        })
+        .then((메시지) => {
+            alert(메시지);
+            return 메시지.split(' ')[0];
+        })
+        .then((메시지) => {
+            alert(메시지);
+            return 메시지[0];
+        })
+        .then((메시지) => {
+            alert(메시지);
+            return 'a';
+        })
+        .then((메시지) => {
+            alert(메시지);
+            return 'b';
+        })
+        .then((메시지) => {
+            alert(메시지);
+            return 'c';
+        })
+        .catch((메시지) => {
+            alert('catch 실행!! :' + 메시지);
+        });
+    </script>
+</body>
+</html>

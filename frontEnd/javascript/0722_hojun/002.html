@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        console.log('hello')
+        fetch('https://test.api.weniv.co.kr/mall')
+        .then((productData) => {
+            return productData.json()
+        })
+        .then((productData) => {
+            return productData[0]
+        })
+        .then((productData) => {
+            return productData['productName']
+        })
+        .then((productName) => {
+            console.log(productName)
+        })
+        .catch((error) => {
+            console.log('삐삐! 애러 발생!!')
+            console.log(error)
+        })
+        console.log('world')
+    </script>
+</body>
+</html>

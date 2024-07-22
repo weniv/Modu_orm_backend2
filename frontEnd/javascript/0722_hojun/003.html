@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main id="main"></main>
+    <script>
+        fetch('https://test.api.weniv.co.kr/mall')
+        .then((productData) => productData.json())
+        .then((productData) => {
+            const main = document.getElementById('main');
+            productData.forEach((item) => {
+                const ProductCard = document.createElement('article');
+                const productName = document.createElement('h2');
+                const productPrice = document.createElement('p');
+                const productImg = document.createElement('img');
+
+                productName.textContent = `상품명 : ${item.productName}`;
+                productPrice.textContent = `가격 : ${item.price}`;
+                productImg.src = `https://test.api.weniv.co.kr/${item.thumbnailImg}`;
+
+                ProductCard.appendChild(productImg);
+                ProductCard.appendChild(productName);
+                ProductCard.appendChild(productPrice);
+
+                main.appendChild(ProductCard);
+            });
+            // codeblock-result 클래스를 가진 요소 선택
+            const codeblockResult = this.querySelector('.codeblock-result');
+            // codeblock-result 요소의 자식을 모두 제거
+            codeblockResult.innerHTML = '';
+            codeblockResult.appendChild(main);
+        });
+    </script>
+</body>
+</html>
