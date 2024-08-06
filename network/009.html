@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+    // 예제1
+    // 쿠키 설정
+    document.cookie = "username=jun";
+    
+    // 쿠키 읽기
+    // 변수 선언 시점이 매우 중요합니다.
+    const cookieValue = document.cookie;
+    console.log(cookieValue);
+    
+    // 쿠키 추가
+    document.cookie = "age=10";
+    
+    console.log(cookieValue);
+    </script>
+</body>
+</html>

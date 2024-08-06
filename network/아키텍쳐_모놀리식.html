@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모놀리식</title>
+</head>
+<body>
+    <h1>게시판</h1>
+    <ul>
+        <!-- 여러곳에서 사용되는 문법입니다. 탬플릿 태그, 넌적스 문법 -->
+        {% for post in posts %}
+        <li>
+            <p>{{post.title}}</p>
+            <p>{{post.contents}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
