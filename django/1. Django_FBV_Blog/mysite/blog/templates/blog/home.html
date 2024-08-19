@@ -1,0 +1,60 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Welcome to Modern Blog{% endblock %}
+
+{% block content %}
+<div class="container">
+    <header class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Welcome to Modern Blog</h1>
+        <p class="lead text-muted">Discover insightful articles and stay updated with the latest trends.</p>
+    </header>
+
+    <section class="mb-5">
+        <h2 class="mb-4">Featured Post</h2>
+        {% if recent_posts %}
+        {% with recent_posts|first as featured_post %}
+        <div class="card shadow-sm">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="<https://via.placeholder.com/300x200>" class="img-fluid rounded-start" alt="Featured post image">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ featured_post.title }}</h3>
+                        <p class="card-text">{{ featured_post.content|truncatewords:50 }}</p>
+                        <p class="card-text"><small class="text-muted">Posted on {{ featured_post.created_date|date:"F d, Y" }}</small></p>
+                        <a href="{% url 'post_detail' pk=featured_post.pk %}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endwith %}
+        {% endif %}
+    </section>
+
+    <section>
+        <h2 class="mb-4">Recent Posts</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {% for post in recent_posts|slice:"1:" %}
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <img src="<https://via.placeholder.com/300x200>" class="card-img-top" alt="Post image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <p class="card-text">{{ post.content|truncatewords:20 }}</p>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <small class="text-muted">Posted on {{ post.created_date|date:"F d, Y" }}</small>
+                    </div>
+                    <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-outline-primary m-3">Read More</a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-center">No posts available yet. Check back soon!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

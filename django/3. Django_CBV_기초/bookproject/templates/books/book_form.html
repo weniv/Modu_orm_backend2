@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {# 만약 view.object.pk 존재 하면 도서정보수정, 존재하지않으면 추가#}
+    {% if view.object.pk %}도서 정보 수정{% else %}도서 추가{% endif %}
+{% endblock %}
+
+{% block content %}
+    <h2>
+        {% if view.object.pk %}도서 정보 수정{% else %}도서 추가{% endif %}
+    </h2>
+    <form method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">
+            {% if view.object.pk %}수정{% else %}추가{% endif %}
+        </button>
+    </form>
+    <a href="{% url 'books:book_list' %}">목록으로 돌아가기</a>
+{% endblock %}

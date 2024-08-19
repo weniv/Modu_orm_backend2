@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+</head>
+<body>
+<h1>블로그 데이터, Django와 관련이 없는 서버에서 Django와 별개로 동작하고 있어요.</h1>
+<script>
+// fetch를 통해 http://127.0.0.1:8000/api/1에서 json 블로그 데이터를 받아 출력하는 코드
+// 지금은 서버에서 CORS를 허용하고 있지 않아서 fetch가 동작하지 않습니다.
+fetch('http://127.0.0.1:8000/api/1')
+  .then(response => response.json())
+  .then(data => {
+    const body = document.querySelector('body');
+    data.forEach(e => {
+        const div = document.createElement('div');
+        div.innerHTML = `<h1>${e.title}</h1><p>${e.content}</p>`;
+        body.appendChild(div);
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작업 통계</title>
+    <style>
+        .statistics { margin-bottom: 20px; }
+        .stat-item { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>작업 통계</h1>
+    <div class="statistics">
+        <div class="stat-item">전체 작업: {{ statistics.total_tasks }}</div>
+        <div class="stat-item">완료된 작업: {{ statistics.completed_tasks }}</div>
+        <div class="stat-item">미완료 작업: {{ statistics.incomplete_tasks }}</div>
+        <div class="stat-item">높은 우선순위 작업: {{ statistics.high_priority_tasks }}</div>
+        <div class="stat-item">중간 우선순위 작업: {{ statistics.medium_priority_tasks }}</div>
+        <div class="stat-item">낮은 우선순위 작업: {{ statistics.low_priority_tasks }}</div>
+    </div>
+    <h2>우선순위별 완료율</h2>
+    <div class="statistics">
+        <div class="stat-item">높은 우선순위 완료율: {{ statistics.priority_3_completion_rate|floatformat:2 }}%</div>
+        <div class="stat-item">중간 우선순위 완료율: {{ statistics.priority_2_completion_rate|floatformat:2 }}%</div>
+        <div class="stat-item">낮은 우선순위 완료율: {{ statistics.priority_1_completion_rate|floatformat:2 }}%</div>
+    </div>
+    <a href="{% url 'task_list' %}">작업 목록으로 돌아가기</a>
+</body>
+</html>
+

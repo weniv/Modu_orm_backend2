@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- 기존 내용 유지 -->
+    <style>
+        .completed { text-decoration: line-through; color: gray; }
+        .priority-high { color: red; }
+        .priority-medium { color: orange; }
+        .priority-low { color: green; }
+    </style>
+</head>
+<body>
+    <h1>할 일 목록</h1>
+
+    <a href="{% url 'task_statistics' %}">작업 통계 보기</a>
+    <a href="{% url 'add_task' %}">새 할 일 추가</a>
+    <ul>
+        {% for task in tasks %}
+            <li class="{% if task.completed %}completed{% endif %} priority-{{ task.get_priority_display|lower }}">
+                {{ task.title }} - 우선순위: {{ task.get_priority_display }}
+                {% if task.due_date %}
+                    (마감일: {{ task.due_date|date:"Y-m-d" }})
+                {% endif %}
+                <form method="post" action="{% url 'set_priority' task.id %}" style="display: inline;">
+                    {% csrf_token %}
+                    <select name="priority" onchange="this.form.submit()">
+                        <option value="1" {% if task.priority == 1 %}selected{% endif %}>낮음</option>
+                        <option value="2" {% if task.priority == 2 %}selected{% endif %}>중간</option>
+                        <option value="3" {% if task.priority == 3 %}selected{% endif %}>높음</option>
+                    </select>
+                </form>
+                <a href="{% url 'edit_task' task.id %}">수정</a>
+                <a href="{% url 'delete_task' task.id %}">삭제</a>
+            </li>
+        {% empty %}
+            <li>할 일이 없습니다.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

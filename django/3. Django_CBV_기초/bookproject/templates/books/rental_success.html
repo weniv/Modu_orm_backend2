@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}대여 성공{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2>도서 대여가 완료되었습니다!</h2>
+    <p class="lead">도서를 잘 읽으시고, 기한 내에 반납해 주세요.</p>
+    <a href="{% url 'books:book_list' %}" class="btn btn-primary">도서 목록으로 돌아가기</a>
+</div>
+{% endblock %}

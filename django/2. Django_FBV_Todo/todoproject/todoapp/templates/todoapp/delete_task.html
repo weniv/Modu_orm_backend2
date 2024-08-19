@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 삭제</title>
+</head>
+<body>
+    <h1>할 일 삭제</h1>
+    <p>정말로 "{{ task.title }}" 할 일을 삭제하시겠습니까?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">예, 삭제합니다</button>
+    </form>
+    <a href="{% url 'task_list' %}">아니오, 목록으로 돌아갑니다</a>
+</body>
+</html>

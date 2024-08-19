@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}도서 삭제{% endblock %}
+
+{% block content %}
+    <h2> 도서 삭제 </h2>
+    <p> 정말로 이 도서를 삭제하겠습니까? </p>
+    <p><strong>{{book.title}}</strong> - {{book.author}}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">삭제</button>
+        <a href="{% url 'books:book_detail' book.pk %}">취소</a>
+    </form>
+{% endblock %}

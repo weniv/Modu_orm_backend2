@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}도서 대여{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>도서 대여</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">대여하기</button>
+    </form>
+</div>
+{% endblock %}

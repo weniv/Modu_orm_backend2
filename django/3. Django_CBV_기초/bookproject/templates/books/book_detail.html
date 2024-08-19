@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ book.title }} - 상세 정보{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2 class="mb-4">{{ book.title }}</h2>
+        
+        <p><strong>저자:</strong> {{ book.author }}</p>
+        <p><strong>출판일:</strong> {{ book.publication_date|date:"Y-m-d" }}</p>
+        <p><strong>장르:</strong> {{ book.genre }}</p>
+        <p><strong>요약:</strong> {{ book.summary }}</p>
+
+        {% if book.image %}
+            <img src="{{ book.image.url }}" alt="{{ book.title }} 이미지" class="img-fluid rounded mt-3 mb-4">
+        {% else %}
+            <p class="text-muted">이미지가 없습니다.</p>
+        {% endif %}
+
+        <div class="btn-group" role="group">
+            <a href="{% url 'books:book_update' book.pk %}" class="btn btn-warning">도서 정보 수정</a>
+            <a href="{% url 'books:book_delete' book.pk %}" class="btn btn-danger">도서 삭제</a>
+            <a href="{% url 'books:book_list' %}" class="btn btn-secondary">도서 목록으로 돌아가기</a>
+        </div>
+    </div>
+{% endblock %}

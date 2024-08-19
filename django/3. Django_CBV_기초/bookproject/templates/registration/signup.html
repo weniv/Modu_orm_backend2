@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load form_tags %}  <!-- 필터 로드 -->
+
+{% block title %}회원가입{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">회원가입</h1>
+    <form method="post" class="needs-validation" novalidate>
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="mb-3">
+                {{ field.label_tag }}
+                {{ field|add_class:"form-control" }}
+                {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+                {% for error in field.errors %}
+                    <div class="invalid-feedback d-block">{{ error }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary w-100">가입하기</button>
+    </form>
+    <p class="mt-3">이미 계정이 있으신가요? <a href="{% url 'login' %}">로그인</a></p>
+</div>
+{% endblock %}
