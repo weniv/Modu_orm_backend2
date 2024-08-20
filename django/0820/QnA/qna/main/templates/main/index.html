@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>템플릿 필터 명령어</title>
+</head>
+<body>
+    <!-- title: hello world -->
+    <!-- content: 22 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id arcu sed risus malesuada venenatis. Aliquam in mattis neque, ac dictum massa. Fusce volutpat elit odio. 
+
+    Praesent iaculis lectus eu pellentesque consequat. Donec nec efficitur leo. 
+
+    Quisque ac malesuada enim, nec maximus justo. Sed ac facilisis mauris.
+
+    <h1>hello world</h1> -->
+
+    <p>{{ post.title }}</p>
+    <p>{{ post.content }}</p>
+    <p>{{ post.content | upper }}</p>
+    <p>{{ post.content | lower }}</p>
+    <p>(V) {{ post.content | linebreaks }}</p>
+    <p>(V) 말줄임: {{ post.content | truncatewords:5 }}</p>
+    <p>말줄임: {{ post.content | truncatewords:7 }}</p>
+    <p>슬라이싱: {{ post.content | slice:":10" }}</p>
+    <p>공백 병합(join): {{ post.content | join:'-' }}</p>
+    <p>['hello', 'world', 'hi'] => hello-world-hi</p>
+    <p>(V) 길이: {{ post.content | length }}</p>
+    <p>태그 없애기: {{ post.content | striptags }}</p>
+    <p>문자열에 더하기: {{ post.content | add:"!" }}</p>
+    <p>날짜: {{ post.created_at }}</p>
+    <p>(V) 날짜 형식 바꾸기: {{ post.created_at | date:"y/m/d" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"y-m-d" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"y" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"Y" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"M" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"D" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"h" }}</p>
+    <p>날짜 형식 바꾸기: {{ post.created_at | date:"i" }}</p>
+    <p>필터 중첩: {{ post.content | upper | linebreaks | truncatewords:10 }}</p>
+
+{% lorem 2 p %}
+
+<!-- 저는 잘 사용하진 않습니다. -->
+{% lorem 1 b random %}
+{% lorem 1 p random %}
+{% lorem 2 w random %}
+<!-- 단어 w, 단락 p, 일반텍스트 b -->
+{# lorem [count] [method] [random] #}
+
+<!-- 사용하지 마세요. -->
+{% autoescape off %}
+{{ post.content }}
+{% endautoescape %}
+</body>
+</html>
