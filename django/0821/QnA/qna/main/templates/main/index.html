@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>템플릿 필터 명령어</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">작성</button>
+    </form>
+    <hr>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.title }} - {{ post.content }}</li>
+        {% endfor %}
+    </ul>
+    {% if form.errors %}
+        <div class="error-messages">
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <p>{{ field.label }}: {{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                <p>{{ error }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <script>
+        // 굳이 유효성 검사를?
+        // 서버에 들어오기 전에 유효성 검사를 해주시면
+        // 서버에 부하를 줄일 수 있습니다.
+        // 서버에서 들어오는 데이터를 어느정도 필터링도 가능합니다.
+    </script>
+</body>
+</html>

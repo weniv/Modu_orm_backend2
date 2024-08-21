@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인스타그램 클론 - 위니브 프렌즈</title>
+    <meta name="description" content="위니브 프렌즈의 인스타그램 스타일 페이지입니다.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // 좋아요 기능
+        function toggleLike(button) {
+            button.classList.toggle('text-red-500');
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <div class="flex">
+        <!-- 왼쪽 사이드바 -->
+        <nav class="fixed h-screen w-64 bg-white border-r border-gray-300 p-5">
+            <h1 class="text-2xl font-bold mb-10">Instagram</h1>
+            <ul>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>홈</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>검색</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>탐색 탭</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>릴스</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>메시지</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>알림</a></li>
+                <li class="mb-4"><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>만들기</a></li>
+                <li><a href="#" class="flex items-center"><svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>프로필</a></li>
+            </ul>
+        </nav>
+
+        <!-- 메인 컨텐츠 -->
+        <main class="ml-64 w-full p-5">
+            <!-- 릴스 -->
+            <section class="mb-8" aria-label="릴스">
+                <h2 class="sr-only">릴스</h2>
+                <div class="flex space-x-4 overflow-x-auto">
+                    <div class="flex-shrink-0 w-16 text-center">
+                        <img src="https://github.com/weniv/weniv_friends_design_asset/blob/main/weniv_profile/53x100_1.png?raw=true" alt="프로필 1" class="w-16 h-16 rounded-full border-2 border-red-500 p-0.5">
+                        <span class="text-xs">사용자1</span>
+                    </div>
+                    <div class="flex-shrink-0 w-16 text-center">
+                        <img src="https://github.com/weniv/weniv_friends_design_asset/blob/main/weniv_profile/53x100.png?raw=true" alt="프로필 2" class="w-16 h-16 rounded-full border-2 border-red-500 p-0.5">
+                        <span class="text-xs">사용자2</span>
+                    </div>
+                    <!-- 추가 릴스 아이템 -->
+                </div>
+            </section>
+
+            <!-- 포스트 -->
+            <section aria-label="포스트">
+                <h2 class="sr-only">포스트</h2>
+                <article class="bg-white border rounded-lg mb-8">
+                    <header class="flex items-center p-4">
+                        <img src="https://github.com/weniv/weniv_friends_design_asset/blob/main/weniv_profile/54x100.png?raw=true" alt="게시자 프로필" class="w-10 h-10 rounded-full mr-3">
+                        <span class="font-bold">위니브</span>
+                    </header>
+                    <img src="https://github.com/weniv/weniv_friends_design_asset/blob/main/weniv_friends/-02.webp?raw=true" alt="포스트 이미지" class="w-full h-auto">
+                    <div class="p-4">
+                        <div class="flex items-center mb-4">
+                            <button onclick="toggleLike(this)" aria-label="좋아요" class="mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                            </button>
+                            <button aria-label="댓글" class="mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </button>
+                            <button aria-label="공유" class="mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                            </button>
+                        </div>
+                        <p><strong>좋아요 100개</strong></p>
+                        <p><strong>위니브</strong> 안녕하세요! 위니브입니다. 오늘도 좋은 하루 보내세요! 😊</p>
+                    </div>
+                </article>
+                <!-- 추가 포스트 -->
+            </section>
+        </main>
+    </div>
+</body>
+</html>

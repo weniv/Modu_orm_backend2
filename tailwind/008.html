@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwindcss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1>flex</h1>
+    <div class="flex gap-4">
+        <div class="border-2 border-black">hello</div>
+        <div class="border-2 border-black">hello</div>
+        <div class="border-2 border-black">hello</div>
+        <div class="border-2 border-black">hello</div>
+    </div>
+    <!-- 
+        justify-content: center        - justify-center
+        justify-content: space-between - justify-between
+        align-items: flex-start        - items-start
+        align-items: center            - items-center
+        align-self: auto               - self-auto
+        align-slef: flex-start         - self-start
+        align-slef: flex-end           - self-end
+        flex: 1 1 0%                   - flex-1
+        flex: 1 1 auto                 - flex-auto
+        flex: 0 1 auto                 - flex-initial
+        flex: none                     - flex-none
+    -->
+    <section>
+        <h2>중앙정렬</h2>
+        <div class="flex justify-center items-center h-64 w-64 border-4 border-red-400">
+            <div class="border-2 border-black">hello</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>grid</h2>
+        <div class="grid grid-cols-3 gap-2">
+            <div class="border-2 border-black">hello</div>
+            <div class="border-2 border-black">hello</div>
+            <div class="border-2 border-black">hello</div>
+            <div class="border-2 border-black">hello</div>
+            <div class="border-2 border-black">hello</div>
+            <div class="border-2 border-black">hello</div>
+        </div>
+    </section>
+</body>
+</html>

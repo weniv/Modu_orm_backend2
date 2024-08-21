@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    h${hello world}*6
+    <h1>hello world</h1>
+    <h2>hello world</h2>
+    <h3>hello world</h3>
+    <h4>hello world</h4>
+    <h5>hello world</h5>
+    <h6>hello world</h6>
+    <!-- space-y 또는 space-x는 1단위가 0.25rem -->
+    <!-- bg-red-200: red값인데 숫자가 높을수록 진해집니다. -->
+    <!-- shadow: 그림자, rounded: radius -->
+    <!-- space-y-4: margin-top: 1rem, 16px -->
+    <!-- 
+        w-96: 96%, 96px이 아니고 0.25rem*96
+        https://tailwindcss.com/docs/width
+    -->
+    <div class="space-y-4">
+        <div class="w-96 bg-red-400 shadow rounded">
+            w-96
+        </div>
+        <div class="w-80 bg-red-200 shadow rounded">
+            w-80
+        </div>
+        <div class="w-72 bg-red-200 shadow rounded">
+            w-72
+        </div>
+        <div class="w-64 bg-red-200 shadow rounded">
+            w-64
+        </div>
+        <div class="w-60 bg-red-200 shadow rounded">
+            w-60
+        </div>
+        <div class="w-56 bg-red-200 shadow rounded">
+            w-56
+        </div>
+        <div class="w-52 bg-red-200 shadow rounded">
+            w-52
+        </div>
+        <div class="w-48 bg-red-200 shadow rounded">
+            w-48
+        </div>
+        <div class="w-1/2 bg-red-200 shadow rounded">
+            w-1/2
+        </div>
+        <div class="w-1/3 bg-red-200 shadow rounded">
+            w-1/3
+        </div>
+        <div class="w-3/4 bg-red-200 shadow rounded">
+            w-3/4
+        </div>
+        <div class="w-auto bg-red-200 shadow rounded">
+            w-auto
+        </div>
+        <div class="w-[20px] bg-red-400 shadow rounded">
+            20px
+        </div>
+    </div>
+    <!-- 
+    
+    copilot: flex로 카드를 만들예정, 카드는 한 row에 3개가 있고 카드의 백그라운드 컬러는 블루계열이었으면 좋겠어 
+    
+    -->
+    <div class="flex space-x-4">
+        <div class="w-1/3 bg-blue-200 shadow rounded">
+            w-1/3
+        </div>
+        <div class="w-1/3 bg-blue-300 shadow rounded">
+            w-1/3
+        </div>
+        <div class="w-1/3 bg-blue-400 shadow rounded">
+            w-1/3
+        </div>
+    </div>
+</body>
+</html>

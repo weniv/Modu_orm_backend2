@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwindcss</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #u_skip {
+            position: relative;
+            z-index: 3000;
+        }
+
+        #u_skip a {
+            position: absolute;
+            top: -60px;
+            left: 0;
+            width: 138px;
+            background: #333;
+            text-align: center;
+        }
+
+        #u_skip a:focus {
+            top: 0px;
+            border: 2px solid #4ec53d;
+        }
+
+        #u_skip span {
+            display: inline-block;
+            padding: 2px 6px 0 0;
+            font-size: 13px;
+            line-height: 26px;
+            color: #fff;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }   
+    </style>
+</head>
+<body>
+    <div id="u_skip">
+        <a href="#newsstand">
+            <span>뉴스스탠드 바로가기</span>
+        </a> 
+        <a href="#themecast">
+            <span>주제별캐스트 바로가기</span>
+        </a> 
+        <a href="#timesquare">
+            <span>타임스퀘어 바로가기</span>
+        </a> 
+        <a href="#shopcast">
+            <span>쇼핑캐스트 바로가기</span>
+        </a> 
+        <a href="#account">
+            <span>로그인 바로가기</span>
+        </a>
+    </div>
+</body>
+</html>
