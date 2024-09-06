@@ -111,6 +111,15 @@ class BookCreateView(generics.CreateAPIView):
 
 ###################################
 # venv > Lib > site-packages > rest_framework > generics.py
+# 1. ListAPIView: 전체목록
+# 2. CreateAPIView: 생성
+# 3. RetrieveAPIView: 1개 보여주기
+# 4. UpdateAPIView: 1개 업데이트
+# 5. DestroyAPIView: 1개 삭제
+# 6. ListCreateAPIView: 전체목록, 생성
+# 7. RetrieveUpdateAPIView: 1개 보여주기, 수정
+# 8. RetrieveDestroyAPIView: 1개 보여주기, 삭제
+# 9. RetrieveUpdateDestroyAPIView: 1개 보여주기, 수정, 삭제
 
 
 class GenericAPIView(views.APIView):
