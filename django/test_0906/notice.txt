@@ -1,0 +1,15 @@
+* nprotect가 켜져있으면 계속 리프레쉬됨
+* 하나씩 천천히 뜯어서 했었어야 했는데, 너무 한꺼번에 많이 한 것 같아 죄송
+	1. JWT만!
+	2. generic만!
+	3. serializer만!
+* 개선사항 다시 보여주기
+* insta 각각 페이지 다시 보여주기
+  // 1. JWT 토큰이 있는지 확인한다.
+  // 2. 토큰이 없으면 로그인 페이지로 이동한다.
+  // 3. 토큰이 있으면 유효한 토큰인지 확인한다.
+  // 4. 토큰이 있는데 유효하지 않으면 refresh 토큰을 이용해서 새로운 토큰을 발급받는다.  
+  // 5. 토큰이 있고, 유효한 토큰이라면 posts를 가져온다.
+  // 6. posts를 가져와서 posts를 렌더링한다.
+* 정말 간단한 "rest_framework_simplejwt" (쳤던 명령어 1)
+* generic에 ListAPIView, RetrieveAPIView, CreateAPIView 등을 테스트 (쳤던 명령어 2)

@@ -1,0 +1,64 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "generic",
+    "collectionId": "791c1fa3-b411-48b1-b444-1db19b94d96e",
+    "dateExported": "2024-09-06T02:18:07.364Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b854de3b-d300-4afe-a104-49f50a4aabcc",
+            "colId": "791c1fa3-b411-48b1-b444-1db19b94d96e",
+            "containerId": "",
+            "name": "Read",
+            "url": "http://127.0.0.1:8000/books/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-06T02:08:55.456Z",
+            "modified": "2024-09-06T02:08:59.431Z",
+            "headers": []
+        },
+        {
+            "_id": "8b60465d-e397-4760-83cd-76138f953388",
+            "colId": "791c1fa3-b411-48b1-b444-1db19b94d96e",
+            "containerId": "",
+            "name": "Read Copy",
+            "url": "http://127.0.0.1:8000/books/",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2024-09-06T02:17:06.278Z",
+            "modified": "2024-09-06T02:17:06.278Z",
+            "headers": []
+        },
+        {
+            "_id": "b374d9bb-3efc-4b8f-a68b-6581044193eb",
+            "colId": "791c1fa3-b411-48b1-b444-1db19b94d96e",
+            "containerId": "",
+            "name": "Create",
+            "url": "http://127.0.0.1:8000/books/create/",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-09-06T02:14:23.980Z",
+            "modified": "2024-09-06T02:15:47.651Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"test123123\",\n  \"author\": \"test123123\",\n  \"publication_date\": \"2030-09-09\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "24ca2f6a-88ec-42e9-9b7f-76c24d716b37",
+            "colId": "791c1fa3-b411-48b1-b444-1db19b94d96e",
+            "containerId": "",
+            "name": "Detail Read",
+            "url": "http://127.0.0.1:8000/books/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-09-06T02:12:20.631Z",
+            "modified": "2024-09-06T02:17:23.808Z",
+            "headers": []
+        }
+    ],
+    "ref": "2i3St6uehOSW2d5mL5DnSUEXp3B_IwdBNH5Vi2wNRnjXzjV89h3mWDzzZ0ZdlyrEZbbWDJ-ojjHcAacaeVxxSQ"
+}
