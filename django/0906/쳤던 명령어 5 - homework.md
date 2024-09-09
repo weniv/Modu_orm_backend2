@@ -73,7 +73,7 @@ from .models import Book
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = ['id', 'title', 'author', 'publication_date']
+        fields = ['id', 'owner', 'title', 'author', 'publication_date']
 
 ###################################
 # book > views.py
@@ -136,7 +136,8 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
 
         # 쓰기 권한은 객체의 author와 요청 사용자가 같은 경우에만 허용
         print(obj.owner)
-        print(request.user)
+        print(request.user) # 'leehojun' => 인스턴스에 __str__의 결과값이 'leehojun'
+        print(request.user.username) # 'leehojun'
         # obj.owner == request.user: 객체 비교
         # obj.owner == request.user.username: 문자열 비교
         return obj.owner == request.user
