@@ -316,6 +316,7 @@ Body:
 }
 
 ###################################
+# first_name과 last_name을 시리얼라이저에서 제거하면 어떻게 되는지 확인
 
 from rest_framework import serializers
 from .models import CustomUser

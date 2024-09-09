@@ -184,16 +184,15 @@ class BaseRouter:
 
 ###################################
 
-
 # DefaultRouter URL 및 HTTP 메서드 매핑
-| URL 패턴 | HTTP 메서드 | 액션 | 설명 |
-|----------|-------------|------|------|
-| `{prefix}/` | GET | list | 리소스 목록 조회 |
-| `{prefix}/` | POST | create | 새 리소스 생성 |
-| `{prefix}/{lookup}/` | GET | retrieve | 특정 리소스 상세 조회 |
-| `{prefix}/{lookup}/` | PUT | update | 특정 리소스 전체 수정 |
-| `{prefix}/{lookup}/` | PATCH | partial_update | 특정 리소스 부분 수정 |
-| `{prefix}/{lookup}/` | DELETE | destroy | 특정 리소스 삭제 |
+| URL 패턴             | HTTP 메서드  | 액션(메서드명)  | 설명 |
+|----------------------|-------------|----------------|------|
+| `{prefix}/`          | GET         | list           | 리소스 목록 조회 |
+| `{prefix}/`          | POST        | create         | 새 리소스 생성 |
+| `{prefix}/{lookup}/` | GET         | retrieve       | 특정 리소스 상세 조회 |
+| `{prefix}/{lookup}/` | PUT         | update         | 특정 리소스 전체 수정 |
+| `{prefix}/{lookup}/` | PATCH       | partial_update | 특정 리소스 부분 수정 |
+| `{prefix}/{lookup}/` | DELETE      | destroy        | 특정 리소스 삭제 |
 
 참고:
 - `{prefix}`: URL 접두사 (예: 'books')
